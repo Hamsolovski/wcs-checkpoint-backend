@@ -16,7 +16,11 @@ export class Country extends BaseEntity {
     @Column()
     name!: string
 
-    @Field()
-    @Column()
+    @Field({nullable: true})
+    @Column({nullable: true})
     flag?: string
+
+    @Field({nullable: true})
+    @Column({nullable: true})
+    continent?: string
 }

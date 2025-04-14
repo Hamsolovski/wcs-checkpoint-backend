@@ -20,6 +20,15 @@ export class CountryResolver {
     return country
   }
 
+  // GET COUNTRIES BY CONTINENT
+  @Query(() => [Country])
+  async getCountryByContinent(@Arg('continent') continent: string) {
+    const country = await Country.find({
+        where: {continent}
+    })
+    return country
+  }
+
   // CREATE A COUNTRY
   @Mutation(() => Country)
   async createCountry(@Arg("data") data: CountryInput) {
@@ -27,6 +36,7 @@ export class CountryResolver {
         code: data.code,
         name: data.name,
         flag: data.flag,
+        continent: data.continent,
       });
     await country.save();
     return country;

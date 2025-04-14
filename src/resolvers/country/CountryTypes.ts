@@ -8,7 +8,10 @@ export class CountryInput {
         @Field()
         name!: string
     
-        @Field()
+        @Field({nullable: true})
         flag?: string
+
+        @Field({nullable: true})
+        continent?: string
 
 }
