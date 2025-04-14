@@ -10,6 +10,10 @@ export class Country extends BaseEntity {
 
     @Field()
     @Column()
+    code!: string
+
+    @Field()
+    @Column()
     name!: string
 
     @Field()
