@@ -1,0 +1,22 @@
+{
+  "name": "checkpoint-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.2",
+    "dotenv": "^16.5.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "type-graphql": "^2.0.0-rc.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  },
+  "author": "Antoine Delalande",
+  "license": "ISC"
+}
