@@ -11,6 +11,16 @@ export class CountryResolver {
     return countries;
   }
 
+  // GET A COUNTRY BY CODE
+  @Query(() => Country)
+  async getCountryByCode(@Arg('code') code: string) {
+    const country = await Country.findOne({
+        where: {code}
+    })
+    return country
+  }
+
+  // CREATE A COUNTRY
   @Mutation(() => Country)
   async createCountry(@Arg("data") data: CountryInput) {
     const country = Country.create({
